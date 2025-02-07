@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 600px;
+        height: 500px;
+        border: 1px solid #fcc;
+        margin: 0 auto;
+      }
+      #canvas {
+        width: 100%;
+        height: 670px;
+        /* height: 100%; 에서 하단 메리값을 60을 줬서 630->670으로 변경 추가값을 더해서 입력함 */
+        border: 1px solid #ccc;
+        position: relative;
+        left: 0;
+        top: 0;
+        posis
+
+        #merry {
+          position: absolute;
+          left: 50%;
+          top: 30px;
+          border: 1px solid #ddf;
+
+          transform-style: preserve-3d;
+
+
+          .face {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin-left: -115px;
+            /* 왜? -50%는 안될까요?px 값으로 해야 하나요? */
+
+            .cell {
+              width: 230px;
+              height: 150px;
+              /* http://placehold.it/230x200 */
+              background: url("img/oh.jpg") center/cover no-repeat;
+              border: 1px solid #00f;
+              /* transform: translate(-50%);    마진으로도 할 수 있다. */
+            }
+
+            &.nth-child(1) {
+              transform: rotateY(0deg) translateZ:(-370px);
+
+              /*
+              자식: translateZ:(-370px); *2배/지름값:740*1470 : 부모:transform-style: preserve-3d; 세트
+              */
+            }
+            &.nth-child(2) {
+              transform: rotateY(30deg) translateZ:(-370px);
+            }
+            &.nth-child(3) {
+              transform: rotateY(0deg) translateZ:(-370px);
+            }
+            &.nth-child(4) {
+              transform: rotateY(0deg) translateZ:(-370px);
+            }
+            &.nth-child(5) {
+              transform: rotateY(0deg) translateZ:(-370px);
+            }
+            &.nth-child(6) {
+              transform: rotateY(0deg) translateZ:(-370px);
+            }
+            &.nth-child(7) {
+              transform: rotateY(0deg) translateZ:(-370px);
+            }
+            &.nth-child(8) {
+              transform: rotateY(0deg) translateZ:(-370px);
+            }
+          }
+        }
+      }
+
+
+      @keyframes
+    </style>
+  </head>
+  <body>
+    <h1>html 5</h1>
+    <h2>class</h2>
+    <hr />
+    <div id="canvas">
+      <div id="merry">
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+        <div class="face">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

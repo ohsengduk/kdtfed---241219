@@ -1,0 +1,40 @@
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+@mixin notice-buttn {
+  width: 150px;
+  height: 100%;
+  padding: $main-font-size/ 2;
+  border-radius: $main-font-size / 4;
+  background: $main-light-color;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: $main-font-size;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+  .complete {
+    @include notice-buttn;
+    border: 3px solid $main-red-color;
+    color: $main-red-color;
+  }
+  .loading {
+    @include notice-buttn;
+    border: 3px solid $main-red-color;
+    color: $main-blue-color;
+  }
+
+  .error {
+    @include notice-buttn;
+    border: 3px solid $main-red-color;
+    color: $main-green-color;
+  }
+}

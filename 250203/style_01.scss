@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  main {
+    width: 500px;
+    border: 1px solid #000;
+    margin: 50px auto;
+
+    img {
+      width: 120px;
+      display: inline-block;
+      border: 1px solid #000;
+      float: left;
+    }
+
+    form {
+      display: right;
+      width: 300px;
+    }
+    .result {
+    }
+  }
+}

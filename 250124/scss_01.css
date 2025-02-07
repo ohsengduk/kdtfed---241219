@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .complete {
+  width: 150px;
+  height: 100%;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid crimson;
+  color: crimson;
+}
+main .loading {
+  width: 150px;
+  height: 100%;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid crimson;
+  color: royalblue;
+}
+main .error {
+  width: 150px;
+  height: 100%;
+  padding: 0.8rem;
+  border-radius: 0.4rem;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border: 3px solid crimson;
+  color: green;
+}

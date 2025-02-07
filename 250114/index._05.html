@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플렉스</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .layout {
+        width: 500px;
+        border: 10px solid #000;
+
+        .parent {
+          display: flex;
+
+          div {
+            width: 300px;
+
+            height: 200px;
+            background: crimson;
+            margin: 5px;
+
+            &.child1 {
+              flex: 1 1 100px;
+              /* 글로우 베이스스 쉬링크  */
+              /* flex-shrink: 1; */
+              /* 줄이다를 뜻을 가지고 있다. */
+
+              /* flex-basis: 100px; */
+            }
+            &.child2 {
+              flex: 1 1 100px;
+              /* flex-shrink: 2; */
+              /* flex-basis: 200px; */
+            }
+            &.child3 {
+              flex: 1 1 100px;
+              /* flex-shrink: 1; */
+              /* flex-basis: 100px; */
+            }
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div class="parent">
+        <div class="child1">1</div>
+        <div class="child2">2</div>
+        <div class="child3">3</div>
+      </div>
+    </div>
+  </body>
+</html>

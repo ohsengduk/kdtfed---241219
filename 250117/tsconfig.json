@@ -1,0 +1,8 @@
+{
+  "CompilerOptions": {
+    "target": "ESNext",
+    "modele": "ESNext"
+  }
+}
+
+// 파일 내에 변수 명이 같아도 같이 사용 할수 있다.

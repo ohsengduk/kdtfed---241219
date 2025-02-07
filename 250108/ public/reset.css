@@ -1,0 +1,16 @@
+/* reset.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  /* body(최상위)로 부터 상속을 받겠다 라는 의미  */
+}

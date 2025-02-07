@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위치 좌표 값에 대한</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 스트일에서 스타일은 정의 되어져 있다. 
+      1.static : 정적인 움직임에 대한 변수가 존재 하지 않는다. 태생이 기본적으로 스태틱이지만, 다른 디바이로 원래 속성을 가져다가 사용할 경우 그때만 사용을 한다.
+      모든 태그는 기본적으로 스테틱을 갖고 있다.
+      2.relative : 렐러티브가 상대적 월래 위치에서 안쪽으로 들어 오면 양수 + 이다. 원래 기준으로 밖으로 나가면 음수 - 값이 된다. 소속되어 있는 상대좌표 값에 영향을 받는다.
+      3.absolute : relative(부모요소)가 없을 경우 body가 절대좌표 값 기준이 된다.
+      4.fixed : 고정시키겠다. 베너광고를 고정값으로 사용함.
+      5.sticky : 끈적한 스티커에서 나온단어 어느 지점에서 붙힐 것인가를 지정함 상단 고정 메뉴를 말한다.
+      평소에는 .static로 있다가 특정 좌표에 오면있다가
+      
+      */
+
+      body {
+        width: 100%;
+        height: 3000px;
+      }
+
+      main {
+        width: 300px;
+        height: 400px;
+        background: tomato;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+
+        /* position: absolute;
+        left: 20px;
+        top: 20px; */
+
+        div {
+          width: 200px;
+          height: 100px;
+          border: 1px solid #000;
+          text-align: center;
+          line-height: 100px; /* height: 100px; 값 그대로 정의 내림 */
+          opacity: 0.7;
+
+          &:first-child {
+            background: yellowgreen;
+          }
+          &:nth-child(2) {
+            background: cyan;
+            position: sticky;
+            top: 100px;
+            left: 500px;
+          }
+          &:last-child {
+            background: burlywood;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </main>
+  </body>
+</html>

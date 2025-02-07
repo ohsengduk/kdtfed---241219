@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플렉스 수업</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parent {
+        border: 1px solid #000;
+        height: 400px;
+        display: flex;
+        flex-wrap: wrap;
+
+        align-content: space-evenly;
+        /* align-items: center; 교차축의 정렬 
+        줄바꿈이 된 상태의 공간안에서 할 경우는 이렇게 쓰임.
+        */
+
+        /*align-content: center;
+        align-content: center;
+        하나의 덩어리로 움직이고 싶을 경우 가능
+
+        */
+        /*  */
+
+        div {
+          background: #000;
+          height: 100px;
+          width: 100px;
+          margin: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="parent">
+      <div class="child">11</div>
+      <div class="child">22</div>
+      <div class="child">33</div>
+      <div class="child">44</div>
+      <div class="child">55</div>
+      <div class="child">66</div>
+      <div class="child">77</div>
+      <div class="child">88</div>
+      <div class="child">99</div>
+      <div class="child">1010</div>
+    </main>
+  </body>
+</html>

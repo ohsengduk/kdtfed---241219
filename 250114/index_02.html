@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>플렉스 다이렉션</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        border: 10px solid aquamarine;
+        display: flex;
+
+        /* flex-wrap: wrap; :=> 부모 아래 의 자식 요소의 넓이 값을 보장해 주고자 할때 사용을 한다.*/
+
+        /* flex-wrap: nowrap : => 기본 디폴트 값을 말한다.; */
+
+        flex-flow: column wrap;
+        /* flex-flow: column wrap; 2가지의 요소를 한번에 사용할 수 있도록 축약해 놓은 것이다. */
+
+        div {
+          width: 100px;
+          height: 100px;
+          background: crimson;
+          margin: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="parent">
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+      <div class="child4">4</div>
+      <div class="child5">5</div>
+      <div class="child6">6</div>
+    </main>
+  </body>
+</html>

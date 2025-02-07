@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 16px;
+  font-family: var(--main-font-style);
+}
+ul,
+li {
+  list-style: none;
+  /* color: #000; */
+}
+a {
+  text-decoration: none;
+  color: var(--main-dark-color);
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}

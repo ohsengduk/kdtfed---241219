@@ -1,0 +1,248 @@
+@import url(reset.css);
+@import url(vs.css);
+@import url(https://fonts.googleapis.com/css2?family=Poiret+One&display=swap);
+
+/*  */
+body {
+  width: 100%;
+  height: 100vh;
+  background: var(--main-bg-color);
+  font-size: 16px;
+  overflow: hidden;
+  /* 해가 떨어지는 순간 스크롤 바가 생김 그래서 히든을 줌 */
+
+  animation: sky 20s linear none infinite;
+}
+
+h1 {
+  width: 1000px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 150%);
+  color: var(--main-light-color);
+  font: normal 5.75rem/1 var(--Poiret-font-style);
+  /* border: 1px solid #f00; */
+}
+
+/*  */
+main {
+  width: 1000px;
+  height: 400px;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* 문법 */
+  transform: translate(-50%, -70%);
+  /* 축약은 안되는 건가요? */
+  .sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* border: 1px solid #f00; */
+
+    .sun {
+      position: absolute;
+      top: -150px;
+      left: 50%;
+      animation: suntime 20s linear none infinite;
+      margin-left: -100px;
+      /* 태양의 사이즈(200px)를 기준으로 -100px     */
+      /* 
+      transform: translateX(-50%);
+      이름 시간  가속  디레이 무한반복 : 재 자리에서 자전만 한다.*/
+      /* 트랜스폼 오리진으로 중심축을 옮겨야 한다.
+      트랜스폼은 쓰는 순서가 중요하다. 상단에 여향을 받아서 하단에서도 영
+      회전하고 이동 이동하고 회원할거냐 이동하고 회전하기
+      magin 값으로 위치 이동을 시키는 것이다.
+      위치 위동을 해야 한다. why? 하단에 영향을 받아서 윗쪽 값을 리셋시키기 때문애....
+      */
+
+      transform-origin: center 500px;
+      /* main {
+      width: 1000px; 
+      
+      값을 기준으로  50%를 한것이다.
+      500px */
+    }
+
+    .cloud1 {
+      position: absolute;
+      top: -30px;
+      left: 10%;
+      /* transform: translateX(-50%); */
+      animation: cloud 15s linear none infinite;
+    }
+    .cloud2 {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      animation: cloud 30s linear none infinite;
+    }
+  }
+  .town {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    .circle {
+      position: absolute;
+      bottom: 104px;
+      left: 50%;
+      margin-left: -165px;
+      opacity: 0.7;
+
+      animation: rotation 20s linear none infinite;
+    }
+    .town_day {
+      position: absolute;
+      bottom: 0px;
+      left: 40px;
+      animation: town 20s linear none infinite;
+    }
+    .town_night {
+      position: absolute;
+      bottom: 0px;
+      left: 40px;
+    }
+  }
+
+  .people {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    animation: day 20s linear none infinite;
+
+    .man {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      animation: flow 7s linear none infinite;
+    }
+    .family {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      animation: flow 20s linear none infinite;
+    }
+  }
+}
+
+@keyframes suntime {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+
+  25% {
+    opacity: 1;
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    opacity: 100%;
+    transform: rotate(0deg);
+  }
+
+  75% {
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    opacity: 0%;
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes cloud {
+  from {
+    opacity: 0;
+    left: 15%;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 95%;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes town {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes flow {
+  from {
+    opacity: 0;
+    left: 15%;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    left: 95%;
+  }
+}
+
+@keyframes sky {
+  from {
+    background: #b08fcc;
+  }
+  25% {
+    background: #b1e1e2;
+  }
+  50% {
+    background: #fcd2e2;
+  }
+  75% {
+    background: #636888;
+  }
+  to {
+    background: #b0fccc;
+  }
+}

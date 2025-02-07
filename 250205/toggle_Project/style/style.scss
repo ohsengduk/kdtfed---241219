@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "./reset.scss";
+@import "./variables.scss";
+
+/* contents */
+.video_frame {
+  width: 100%;
+  height: 100vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      -135deg map-get($color, main-bg-color) transparent
+    );
+    z-index: 2;
+  }
+
+  video {
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 3;
+}
+
+.heading {
+  width: 700px;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  z-index: 3;
+
+  h1 {
+    font-size: 4rem;
+    sapn {
+      display: block;
+      color: map-get($map: $color, $key: main-bg-color);
+    }
+  }
+  p {
+    font-size: 2rem;
+    color: map-get($map: $color, $key: main-bg-color);
+  }
+
+  .buttons {
+    a {
+      display: inline-block;
+      width: 150px;
+
+      margin: 14px 8px;
+      padding: 8;
+      background: map-get($map: $color, $key: main-light-color);
+      color: map-get($map: $color, $key: main-text-color);
+      text-align: center;
+      border: 1px solid map-get($map: $color, $key: main-light-color);
+
+      &.btn-learn {
+        background: transparent;
+        color: map-get($map: $color, $key: main-light-color);
+        transition: all 0.5s;
+
+        &:hover {
+          background: map-get($map: $color, $key: main-light-color);
+          color: map-get($map: $color, $key: main-dark-color);
+        }
+      }
+      &.bnt-book {
+        transition: all 0.5s;
+        &:hover {
+          background: map-get($map: $color, $key: main-dark-color);
+          color: map-get($map: $color, $key: main-light-color);
+          border: 1px solid map-get($map: $color, $key: main-dark-color);
+        }
+      }
+    }
+  }
+}
