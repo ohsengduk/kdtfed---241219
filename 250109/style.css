@@ -1,0 +1,233 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+/* reset */
+@import url("./styles/reset.css");
+
+/* variables */
+@import url("./styles/variables.css");
+
+/* h1 {
+  background: var(--main-dark-color);
+  color: var(--main-light-color);
+  font-family: var(--orbitron-font-family);
+} */
+
+body {
+  font-size: 16px;
+  background: var(--background-color);
+  /* 로딩페이지동안의 이탈자를 막기 위해서 페이지가 멈춤이 아니라는 것을 알리고자 색을 넣었음 */
+  font-family: var(--orbitron-font-family);
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.mb_01 {
+    background: #47d1ff;
+
+    main {
+      article {
+        img {
+          box-shadow: 5px 15px 30px rgba(173, 261, 230, 0.8);
+        }
+
+        a {
+          background: linear-gradient(45deg, #4affff, #35e0f7);
+          box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.4);
+        }
+      }
+    }
+  }
+
+  &.mb_02 {
+    background: #1e9b7c;
+
+    main {
+      article {
+        img {
+          box-shadow: 5px 5px 10px #35e0f767;
+        }
+
+        a {
+          background: linear-gradient(45deg, #2effa8, #004e3b);
+          box-shadow: 5px 10px 20px rgba(29, 255, 161, 0.4);
+        }
+      }
+    }
+  }
+
+  &.mb_03 {
+    background: #81005a;
+
+    main {
+      article {
+        img {
+          box-shadow: 5px 5px 10px #d135a267;
+        }
+
+        a {
+          background: linear-gradient(45deg, #fc3efc, #630042);
+          box-shadow: 5px 10px 20px rgba(228, 22, 255, 0.4);
+        }
+      }
+    }
+  }
+
+  &.mb_04 {
+    background: #6f0079;
+
+    main {
+      article {
+        img {
+          box-shadow: 5px 5px 10px #6a28a767;
+        }
+
+        a {
+          background: linear-gradient(45deg, #cd26ee, #6700a3);
+          box-shadow: 5px 10px 20px rgba(36, 1, 41, 0.4);
+        }
+      }
+    }
+  }
+}
+
+/* contents */
+main {
+  width: 340px;
+  height: auto;
+  /* height: 100%; */
+  /* 메인에 자식요소의 값을 100% 허용해 주겠다는 의미를 갖는다 */
+  background: var(--main-light-color);
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  /* margin: 50px auto; */
+  padding: 30px;
+
+  #menu {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: var(--nav-icon-color);
+      font-size: 1.25rem;
+    }
+  }
+
+  article {
+    width: 100%;
+
+    text-align: center;
+    /* text-align: center;이 가능한 이유는 article 시멘틱 이기때문에 가능한다 */
+    margin: 20px 0;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      /* width: 200px;  이미지의 넓이 값을 기준으로  border-radius:100px; 해서 적용이 가능하다*/
+      box-shadow: 5px 15px 30px rgba(173, 261, 230, 0.8);
+    }
+
+    h1 {
+      margin: 20px 0 5px;
+      font: bold 1.37rem/1 var(--orbitron-font-family);
+      color: var(--profile-mf-color);
+    }
+
+    h2 {
+      font: normal 0.75rem/1 var(--orbitron-font-family);
+      color: var(--profile-sf-color);
+      margin-bottom: 30px;
+    }
+    a {
+      display: inline-block;
+      text-align: center;
+      width: 180px;
+      height: 32px;
+      color: var(--main-light-color);
+      background: linear-gradient(45deg, #4affff, #35e0f7);
+      border-radius: 16px;
+      font: bold 0.75rem/32px var(--orbitron-font-family);
+      box-shadow: 5px 10px 20px rgba(0, 255, 255, 0.4);
+    }
+  }
+
+  ul {
+    margin-bottom: 25px;
+
+    li {
+      width: 100%;
+      border-bottom: 1px solid var(--border-bottom-color);
+      padding: 10px 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        i {
+          color: var(--profile-mf-color);
+          font-size: 1rem;
+          text-shadow: 2px 2px 2px var(--icon-shadow-color);
+        }
+        span {
+          letter-spacing: 1px;
+          font: normal 0.75rem/1 var(--orbitron-font-family);
+          color: var(--profile-mf-color);
+        }
+      }
+    }
+  }
+
+  nav#others {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* 3가지 있음 */
+
+    a {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      /* border: 1px solid #ccc; */
+      opacity: 0.4;
+      filter: saturate(0.7);
+      /* 채도를 결정한다. 선명도 */
+      &.on {
+        opacity: 1;
+        filter: saturate(1);
+        /* 온이라는 클래스를 받은 아이만 적용이 된다. */
+      }
+
+      &:first-child {
+        background: #35e0f7;
+        box-shadow: 5px 5px 10px #35e0f767;
+      }
+
+      &:nth-child(2) {
+        background: #55f5cd;
+        box-shadow: 5px 5px 10px #35e0f767;
+      }
+      &:nth-child(3) {
+        background: #d363ad;
+        box-shadow: 5px 5px 10px #9f51cc67;
+      }
+      &:last-child {
+        background: #a169a3;
+        box-shadow: 5px 5px 10px #9b438f67;
+      }
+    }
+  }
+}

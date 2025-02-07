@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 200px;
+    height: 200px;
+    background: #ccc;
+    perspective: 400px;
+    /* 지름에(width) 2배를 줬야지만 안정적으로 볼 수 있다. 
+    수가 낮을 수록 가까이 볼수 있다.
+    2배 이상을 줬도 더 이상 멀리 갈수 없다.
+    중앙에 중심 축을 기준으로 돌고 있음
+    
+    그럼 멀리 가고 싶으면 어떻게 해요?
+
+    */
+
+    .box {
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      background: royalblue;
+
+      animation: rotations 5s linear none infinite;
+    }
+  }
+}
+
+@keyframes rotations {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0deg);
+    /*  */
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotateX(360deg);
+  }
+}

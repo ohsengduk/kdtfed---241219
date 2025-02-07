@@ -1,0 +1,52 @@
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap";
+
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+$color: (
+  font-primary: #2d3436,
+  font-secondary: #2d3436,
+  font-focus: #2d3436,
+  bg-pr-imary: #ff00dd,
+  bg-secondary: #fff000,
+);
+
+$fontfamily: (
+  eng: "Noto Sans KR",
+  kor: "Noto Sans KR",
+);
+$fontSize: (
+  large: $main-font-size * 3,
+  medium: $main-font-size * 2,
+  normal: $main-font-size,
+  small: $main-font-size / 2,
+);
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: $main-font-size;
+  background: map-get($color, bg-pr-imary);
+  font-family: map-get($fontFamily, eng);
+
+  .frame {
+    h1 {
+      color: map-get($color, font-focus);
+      font-size: map-get($fontSize, large);
+    }
+
+    p {
+      font-size: map-get($fontsize, medium);
+    }
+  }
+}

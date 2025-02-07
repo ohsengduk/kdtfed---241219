@@ -1,0 +1,28 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.frame {
+  font-size: 5rem;
+  border: 1px solid #000;
+  padding: 20px;
+  text-align: center;
+  /*최상의 루트상의 .heading을 다 찾아 오겠다고 선언을 함.*/
+}
+.heading {
+  font-size: 100px;
+  font-size: 8rem; /* scss산술연산이 가능하다.*/
+  color: crimson;
+  font-weight: normal;
+}

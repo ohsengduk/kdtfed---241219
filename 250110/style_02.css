@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #fcc;
+}
+
+main {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  /* border: 1px solid #ccc; */
+  transform-style: preserve-3d;
+  animation: box 13s linear none infinite;
+  /* perspective: 400px; */
+  /* width: 200px; 공간감에 원근감(입체감)에 2배수가 적당하다 */
+
+  div {
+    width: 100%;
+    height: 100%;
+
+    /* 시멘틱 태그는 하단에 시멘틱 요소끼리는 따로 width 값을 주지 않아도 그대로 상속 받는거 아닌가요?
+     상속을 100%  안 줬도 그대로 상속 받는 것은 아닌가요?
+    시멘틱 태그 끼리는 맞지만 div 일반 태그 이다. 그리고 
+    지정하여 주는것이 정석이다 안 하면 나중에 깊게 들어 갈 경우 값을 못 찾아 올 수도 있다.
+   */
+
+    text-align: center;
+    line-height: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    backface-visibility: hidden;
+    /* 뒤에 있는 것을 안 보이도록 하는것 */
+
+    &:nth-child(1) {
+      transform: rotateY(0deg) translate3d(0, 0, 100px);
+      background: red;
+    }
+
+    &:nth-child(2) {
+      transform: rotateY(90deg) translate3d(0, 0, 100px);
+      background: blue;
+    }
+    &:nth-child(3) {
+      transform: rotateY(180deg) translate3d(0, 0, 100px);
+      background: yellow;
+    }
+    &:nth-child(4) {
+      transform: rotateY(270deg) translate3d(0, 0, 100px);
+      background: green;
+    }
+    &:nth-child(5) {
+      transform: rotateX(90deg) translate3d(0, 0, 100px);
+      background: brown;
+    }
+    &:nth-child(6) {
+      transform: rotateX(270deg) translate3d(0, 0, 100px);
+      background: aqua;
+    }
+  }
+}
+
+/*  rotateX(0deg) rotateY(0deg) rotateZ(0deg) 
+x-축으로 돌고 y-으로 돌고 
+*/
+@keyframes box {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  50% {
+  }
+  to {
+    transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+  }
+}

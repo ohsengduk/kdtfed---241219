@@ -1,0 +1,16 @@
+:root {
+  --main-light-color: #fff;
+  --main-dark-color: #000;
+  --main-dark01-color: #555;
+  --main-red-color: #f00;
+  --main-b-color: #00f;
+  --main-p-color: #f0f;
+  --main-y-color: #ff0;
+  --border-main-color: #fff;
+
+  --button-border-color: #bbb;
+  --logo-font-color: #444;
+  --lnb-font-color: #999;
+  --gnb-font-color: #888;
+  --sub-desc-color: #898989;
+}

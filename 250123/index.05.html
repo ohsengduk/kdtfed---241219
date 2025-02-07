@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이벤트 버플링 엔터 설명 자바스연결됨</title>
+    <script defer src="./java.05.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 500px;
+        height: 200px;
+        margin: 30px auto;
+        padding: 15px;
+        border: 2px solid #000;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        /* 목적성이 있을 경우 이렇게 주는 것이다 */
+        .out {
+          width: 230px;
+          height: 180px;
+          background: #d6edfc;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          .in {
+            width: 60%;
+            height: 60%;
+            background: #fc0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 마우스 오버 -->
+      <div class="out overout">
+        <p>move your mouse</p>
+        <div class="in overout">
+          <p>move your mouse</p>
+          <p>0</p>
+        </div>
+        <p>0</p>
+      </div>
+
+      <!-- 마우스 엔터 -->
+      <div class="out enterleave">
+        <p>move your mouse</p>
+        <div class="in enterleave">
+          <p>move your mouse</p>
+          <p>0</p>
+        </div>
+        <p>0</p>
+      </div>
+    </div>
+  </body>
+</html>

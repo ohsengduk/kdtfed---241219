@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>float 속성</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 960px;
+        height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(
+            120deg,
+            #84fab0 0%,
+            #8fd3f4 100%,
+            #068ccf 100%,
+            #068ccf 100%,
+            #068ccf 100%,
+            #068ccf 100%,
+            #068ccf 100%
+          )
+          no-repeat;
+
+        /* linear-gradient=함수를 쓰고 매개 변수:( 각도 색상 알파값) 
+        무한대로 들어간다.
+        to bottom  왼쪽에서 오른쪽
+        갯수 상관없이 계속 줄 수 있다.
+
+      
+        */
+      }
+
+      main {
+        /* overflow: hidden; */
+        /* display: flex; */
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        /* 다시금 설명 부탁 드립니다. 설명을 빛 얘기하다가 못 들었어요~ */
+        /* 많은 색을 보고 카피를 하는 수 밖에 답이 없다. */
+      }
+      aside {
+        width: 200px;
+        /* float: left; */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>header</h1>
+    </header>
+    <nav>
+      <h1>navigation</h1>
+    </nav>
+    <main>
+      <aside>
+        <h1>aside</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta
+          voluptatum labore qui dolorem consequatur. Facere est nostrum, nobis
+          ipsum temporibus laudantium dolor cupiditate. Praesentium molestias,
+          reprehenderit blanditiis quod distinctio iure!
+        </p>
+      </aside>
+      <section>
+        <h1>section</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium,
+          esse nisi minus quo labore accusantium debitis reiciendis repudiandae
+          adipisci, exercitationem, alias iusto beatae. Nobis vel laudantium
+          unde est error aliquid.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <h1>footer</h1>
+    </footer>
+  </body>
+</html>
