@@ -1,0 +1,68 @@
+/*=======reset.css========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*=======style.css========*/
+.slide_wrapper {
+  width: 660px;
+  height: 200px;
+  position: relative;
+  // overflow: hidden;
+  //보여지는 것에 대한 속성
+
+  .slides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    // transition: all 0.5s;
+    //넣었다가 빼었다가 할 수 있어야 한다. 가상 클래스로 주면 된다. node에서 붙혔다가 뺄 것이냐를 결정하며 된다.
+
+    &.animete {
+      transition: all 0.5s; //넣었다가 빼었다가 할 수 있어야 한다. 가상 클래스로 주면 된다. node에서 붙혔다가 뺄 것이냐를 결정하며 된다.
+    }
+
+    li {
+      width: 200px;
+      height: 200px; //height: 100%; = 높이가 내용만큼만 적용이 되어서 부모의 100% 안하고 높이값때문에 똑같이 지정을 해줌
+      background: #ccc;
+      &:not(:last-child) {
+        //부정연산자 마지막에만 주지 않겠다.
+        margin-right: 30px;
+      }
+    }
+  }
+}
+.controls {
+  margin-top: 30px;
+  text-align: center;
+  // border: 1px solid #f00;
+  span {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+}
