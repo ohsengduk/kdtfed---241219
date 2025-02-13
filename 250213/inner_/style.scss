@@ -1,0 +1,67 @@
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.warp {
+  // padding: 50px;
+  // border: 1px solid #000;
+  margin-top: 5%;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 15%;
+    color: blueviolet;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  #formstyle {
+    input {
+      border: none;
+      border-bottom: 1px solid #ccc;
+    }
+    input:focus {
+      outline: none;
+    }
+  }
+
+  #btn {
+    width: 80px;
+    padding: 10px;
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    background: blueviolet;
+    color: #fff;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  #btn:hover {
+    color: #8a2be2;
+    background: #fff;
+    box-shadow: 0 0 8px rgba($color: #8a2be2, $alpha: 0.5);
+    font-weight: bold;
+  }
+}
+
+#result {
+  border: 1px solid blueviolet;
+  border-radius: 20px;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+}

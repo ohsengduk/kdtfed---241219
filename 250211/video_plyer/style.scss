@@ -38,7 +38,7 @@ body {
   width: 80%;
   max-width: 550px;
   position: relative;
-  // overflow: hidden;
+  overflow: hidden;
   cursor: pointer;
   video {
     width: 100%;
@@ -63,7 +63,7 @@ body {
       top: 0;
       left: 0;
       .bar {
-        width: 30%;
+        width: 0;
         height: 100%;
         background: map-get($map: $color, $key: accent);
         position: relative;
@@ -96,6 +96,7 @@ body {
           width: 40px;
           height: 30px;
           text-align: center;
+          padding-bottom: 2px;
           border: none;
           border-radius: 8px;
           background: map-get($map: $color, $key: accent);
@@ -108,9 +109,19 @@ body {
         }
         input[type="range"] {
           width: 100px;
+          height: 6px;
+          border-radius: 8px;
           background: map-get($map: $color, $key: light);
           appearance: none;
           -webkit-appearance: none;
+          &::-webkit-slider-thumb {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: map-get($map: $color, $key: accent);
+            appearance: none;
+            -webkit-appearance: none;
+          }
         }
         .time {
           display: flex;
