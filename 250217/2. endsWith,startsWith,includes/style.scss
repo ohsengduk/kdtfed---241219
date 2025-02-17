@@ -1,0 +1,27 @@
+$color: (
+  light: #fff,
+  dark: #000,
+  accent: #222,
+  bg: #444,
+);
+/*======== reset.css ========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+/*======== style.css ========*/
+h1 {
+  color: #ddd;
+}
