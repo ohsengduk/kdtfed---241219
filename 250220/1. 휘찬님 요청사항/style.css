@@ -1,0 +1,60 @@
+/*======== reset.css ========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*======== style.css ========*/
+.main {
+  position: relative;
+  border: 1px solid #000;
+  padding: 20px;
+  width: 300px;
+  hegiht: 30px;
+  padding-left: 10px;
+}
+.main i {
+  color: crimson;
+  position: absolute;
+  right: 30px;
+}
+.main::-moz-placeholder {
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.main::placeholder {
+  transition: opacity 0.3s;
+}
+.main:focus {
+  outline: none;
+}
+.main:focus::-moz-placeholder {
+  opacity: 0;
+}
+.main:focus::placeholder {
+  opacity: 0;
+}

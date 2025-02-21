@@ -1,0 +1,76 @@
+/*======== reset.css ========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*======== style.css ========*/
+.loating {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f00;
+  position: relative;
+}
+.loating span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  animation: loating 1.5s linear infinite;
+}
+.loating span:nth-child(1) {
+  background: #ffc;
+}
+.loating span:nth-child(2) {
+  background: #fcf;
+  animation-duration: 0.8s;
+}
+
+@keyframes loating {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 10px);
+  }
+  50% {
+    top: calc(100% - 10px);
+    left: calc(100% - 10px);
+  }
+  75% {
+    top: calc(100% - 10px);
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
