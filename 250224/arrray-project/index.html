@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array-project</title>
+
+    <!-- 폰트 어썸 -->
+    <script
+      src="https://kit.fontawesome.com/53e2be1d47.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 기본 -->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <main class="conteainer">
+      <from name="shopping-form" action="http://127.0.0.1:5500" methoe="get">
+        <h1>상품목록</h1>
+        <div class="search">
+          <input
+            type="text"
+            name="serch"
+            id="serch"
+            placeholder="serch"
+            class="serchBar"
+          />
+          <i class="fas fa-magnifying-glass"></i>
+        </div>
+
+        <div class="sort-buttons">
+          <input class="newList" type="button" value="최신 출시순 정렬" />
+          <input class="asecnding" type="button" value="가격 오른차순 정렬" />
+          <input class="decending" type="button" value="가격 내림차순 정렬" />
+        </div>
+
+        <select name="cartegory" id="cartegory">
+          <option selected disabled>카테고리를 선택하세요</option>
+          <option value="life">생활용품</option>
+          <option value="it">전자기기</option>
+          <option value="book">도서/문구</option>
+        </select>
+      </from>
+
+      <ul>
+        <!-- <li>
+          <img src="./img/cup.jpg" alt="" />
+          <div>
+            <h3 class="name">Cup</h3>
+            <span class="price">9,900</span>
+          </div>
+        </li> -->
+      </ul>
+    </main>
+  </body>
+</html>

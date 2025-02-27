@@ -1,0 +1,26 @@
+"data":[
+  {
+    "name": "",
+    "price": "19000",
+    "category": "book",
+    "img": "./img/pen.jpg"
+  },
+  {
+    "name": "Cup",
+    "price": "19000",
+    "category": "it",
+    "img": "./img/pen.jpg"
+  },
+  {
+    "name": "Cup",
+    "price": "19000",
+    "category": "life",
+    "img": "./img/pen.png"
+  },
+  {
+    "name": "Cup",
+    "price": "19000",
+    "category": "book",
+    "img": "./img/pen.jpg"
+  },
+]
